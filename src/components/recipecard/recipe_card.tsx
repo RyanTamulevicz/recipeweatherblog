@@ -5,41 +5,24 @@ import {
   CardTitle
 } from "@/components/ui/card"; 
 import Link from "next/link";
-import { Timer, Cloud, Sun, CloudRain, Snowflake } from "lucide-react";
-
-interface Recipe {
-  title: string;
-  description: string;
-  imageUrl: string;
-  link: string;
-  time_to_cook: string;
-  good_in_weather: string;
-  difficulty: string;
-}
+import { Timer } from "lucide-react";
+import { WeatherIcon } from "@/components/weathericon";
+import { Recipe } from "@/types/recipe";
+import Image from "next/image";
 
 interface RecipeCardProps {
   recipe: Recipe;
 }
 
 export default function RecipeCard({ recipe }: RecipeCardProps) {
-  const weather_icons: { [key: string]: JSX.Element } = {
-    'cloudy': <Cloud />,
-    'sunny': <Sun />,
-    'rainy': <CloudRain />,
-    'snowy': <Snowflake />,
-    'default': <Cloud />
-  }
-
-  const weatherIcon = weather_icons[recipe.good_in_weather] || weather_icons['default'];
-
     return(
-    <Link href={recipe.link}>
-        <Card className="w-full  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+    <Link href={`/recipe/blog/${recipe.slug}`}>
+        <Card className="w-full transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105">
           <div className="grid gap-4 p-6">
           <CardTitle className="text-lg font-semibold leading-none">
             <div className="flex flex-row justify-between">
               <span>{recipe.title}</span>
-              <span>{weatherIcon}</span>
+              <WeatherIcon weather={recipe.good_in_weather} />
             </div>
             <div className="text-sm font-normal text-gray-500 pt-2">
               {recipe.difficulty} Difficulty
@@ -54,7 +37,7 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
             </CardDescription>
           </div>
           <CardContent>
-          <img
+          <Image
             alt={recipe.title}
             height="225"
             src={recipe.imageUrl}

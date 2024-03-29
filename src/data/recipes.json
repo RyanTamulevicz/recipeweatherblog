@@ -1,29 +1,170 @@
 [
-    {
-        "title": "Chicken Alfredo",
-        "description": "A creamy pasta dish with chicken",
-        "imageUrl": "https://thecozycook.com/wp-content/uploads/2022/08/Chicken-Alfredo-Pasta-1-1.jpg",
-        "link": "/",
-        "time_to_cook": "30 minutes",
-        "good_in_weather": "cloudy",
-        "difficulty": "Medium"
-    },
-    {
-        "title": "Spaghetti and Meatballs",
-        "description": "A classic Italian dish",
-        "imageUrl": "https://static01.nyt.com/images/2017/04/05/dining/05COOKING-NIGMEATBALLS2/05COOKING-NIGMEATBALLS2-superJumbo.jpg",
-        "link": "/",
-        "time_to_cook": "30 minutes",
-        "good_in_weather": "sunny",
-        "difficulty": "Medium"
-    },
-    {
-        "title": "Grilled Cheese",
-        "description": "A classic American sandwich",
-        "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2023/01/grilled-cheese.jpg",
-        "link": "/",
-        "time_to_cook": "30 minutes",
-        "good_in_weather": "snowy",
-        "difficulty": "Hard"
+  {
+    "title": "Chicken Alfredo",
+    "slug": "chicken-alfredo",
+    "description": "A creamy pasta dish with chicken",
+    "imageUrl": "https://images.pexels.com/photos/11220209/pexels-photo-11220209.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "link": "/recipe/blog/chicken-alfredo",
+    "time_to_cook": "30 minutes",
+    "good_in_weather": "cloudy",
+    "difficulty": "Medium",
+    "method": [
+      "Cook pasta according to package instructions.",
+      "Season chicken with salt and pepper, then cook in a skillet until golden brown.",
+      "Remove chicken and add garlic to the skillet. Cook until fragrant.",
+      "Stir in heavy cream and parmesan until a smooth sauce forms.",
+      "Add cooked pasta and chicken to the sauce, tossing to combine.",
+      "Serve with additional parmesan and parsley on top."
+    ],
+    "ingredients": [
+      "1 lb fettuccine pasta",
+      "2 chicken breasts",
+      "Salt and pepper to taste",
+      "2 cloves garlic, minced",
+      "2 cups heavy cream",
+      "1 cup grated parmesan",
+      "Parsley for garnish"
+    ],
+    "blog": "Diving into a plate of Chicken Alfredo feels like a warm hug on a cloudy day. The creamy sauce envelops each strand of pasta, delivering a comforting, rich flavor that soothes the soul. It's the perfect dish to indulge in when you need a moment of culinary bliss."
+  },
+  {
+    "title": "Spaghetti and Meatballs",
+    "slug": "spaghetti-and-meatballs",
+    "description": "A classic Italian dish",
+    "imageUrl": "https://images.pexels.com/photos/6248853/pexels-photo-6248853.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "link": "/recipe/blog/spaghetti-and-meatballs",
+    "time_to_cook": "30 minutes",
+    "good_in_weather": "sunny",
+    "difficulty": "Medium",
+    "method": [
+      "Mix ground beef, breadcrumbs, parmesan, egg, garlic, and parsley. Form into meatballs.",
+      "Brown meatballs in a skillet, then remove.",
+      "Add tomato sauce to the skillet and bring to a simmer.",
+      "Return meatballs to the skillet, cover, and cook until meatballs are cooked through.",
+      "Boil spaghetti until al dente, then drain.",
+      "Serve meatballs and sauce over spaghetti, garnished with more parmesan."
+    ],
+    "ingredients": [
+      "1 lb spaghetti",
+      "1 lb ground beef",
+      "1/2 cup breadcrumbs",
+      "1/4 cup grated parmesan, plus more for serving",
+      "1 egg",
+      "2 cloves garlic, minced",
+      "2 tbsp chopped parsley",
+      "24 oz tomato sauce"
+    ],
+    "blog": "There's something undeniably magical about Spaghetti and Meatballs on a sunny day. Each bite is a journey back to childhood, where simplicity met delight in the form of tender meatballs and twirls of spaghetti. It's a dish that gathers smiles around the table, brightening any day with its heartwarming flavors."
+  },
+  {
+    "title": "Grilled Cheese",
+    "slug": "grilled-cheese",
+    "description": "A classic American sandwich",
+    "imageUrl": "https://images.pexels.com/photos/1885578/pexels-photo-1885578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "link": "/recipe/blog/grilled-cheese",
+    "time_to_cook": "30 minutes",
+    "good_in_weather": "snowy",
+    "difficulty": "Hard",
+    "method": [
+      "Butter one side of each bread slice.",
+      "Place a slice of cheese between two slices of bread, with the buttered sides facing out.",
+      "Heat a skillet over medium heat and cook the sandwich until golden brown on each side and the cheese has melted.",
+      "Serve immediately, optionally with tomato soup."
+    ],
+    "ingredients": [
+      "4 slices of bread",
+      "2 tbsp butter, softened",
+      "4 slices of cheese (cheddar, American, or your preference)"
+    ],
+    "blog": "On a snowy day, nothing warms the heart quite like a Grilled Cheese sandwich. Its golden, crispy exterior gives way to a gooey, melty center, creating a simple yet profound joy in each bite. This sandwich is a testament to the comfort found in the warmth of a well-loved kitchen."
+     },
+  {
+    "title": "Beef Stroganoff",
+    "slug": "beef-stroganoff",
+    "description": "A rich, creamy beef and mushroom sauce served over noodles.",
+    "imageUrl": "https://images.pexels.com/photos/17593641/pexels-photo-17593641/free-photo-of-close-up-of-a-bowl-of-ramen.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "link": "/recipe/blog/beef-stroganoff",
+    "time_to_cook": "45 minutes",
+    "good_in_weather": "cold",
+    "difficulty": "Medium",
+    "method": [
+      "Sauté sliced onions and mushrooms in a pan until tender.",
+      "Brown slices of beef in the same pan, then set aside.",
+      "Deglaze the pan with a splash of wine, add beef broth and a dollop of sour cream to create the sauce.",
+      "Return the beef, onions, and mushrooms to the pan. Simmer until the beef is tender.",
+      "Serve the stroganoff over cooked noodles, garnished with chopped parsley."
+    ],
+    "ingredients": [
+      "1 lb beef sirloin, sliced thin",
+      "1 onion, sliced",
+      "8 oz mushrooms, sliced",
+      "1 cup beef broth",
+      "1/2 cup sour cream",
+      "2 tbsp white wine",
+      "Salt and pepper to taste",
+      "Cooked noodles for serving",
+      "Parsley for garnish"
+    ],
+    "blog": "Beef Stroganoff brings a sense of luxury to the dinner table, with its creamy, savory sauce hugging each strand of noodle. On a cold night, it's a dish that promises warmth and satisfaction, turning a simple meal into a memorable feast."
+  },
+  {
+    "title": "Vegetable Curry",
+    "slug": "vegetable-curry",
+    "description": "A spicy, hearty vegetable stew perfect for any season.",
+    "imageUrl": "https://images.pexels.com/photos/674574/pexels-photo-674574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "link": "/recipe/blog/vegetable-curry",
+    "time_to_cook": "40 minutes",
+    "good_in_weather": "rainy",
+    "difficulty": "Easy",
+    "method": [
+      "In a large pot, heat oil and add a mixture of spices. Toast until fragrant.",
+      "Add chopped onions, garlic, and ginger. Cook until onions are translucent.",
+      "Stir in chopped vegetables and cook for a few minutes to soften.",
+      "Pour in coconut milk and vegetable broth. Bring to a simmer and cook until vegetables are tender.",
+      "Serve the curry over rice, garnished with fresh cilantro."
+    ],
+    "ingredients": [
+      "1 tbsp vegetable oil",
+      "2 tsp curry powder",
+      "1 onion, chopped",
+      "2 cloves garlic, minced",
+      "1 inch ginger, minced",
+      "4 cups mixed vegetables (carrot, potato, bell pepper, peas)",
+      "1 can coconut milk",
+      "1 cup vegetable broth",
+      "Salt to taste",
+      "Rice for serving",
+      "Cilantro for garnish"
+    ],
+    "blog": "Vegetable Curry is like a warm embrace on a rainy day. Each spoonful offers a burst of flavor, with spices that awaken the senses and hearty vegetables that nourish the soul. It's a dish that celebrates the vibrant colors and diversity of nature, making every meal an adventure."
+  },
+  {
+    "title": "Lemon Garlic Shrimp Pasta",
+    "slug": "lemon-garlic-shrimp-pasta",
+    "description": "A light and zesty pasta dish that’s perfect for summer evenings.",
+    "imageUrl": "https://images.pexels.com/photos/17320991/pexels-photo-17320991/free-photo-of-a-bowl-of-soup-with-shrimp-lime-and-herbs.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "link": "/recipe/blog/lemon-garlic-shrimp-pasta",
+    "time_to_cook": "25 minutes",
+    "good_in_weather": "sunny",
+    "difficulty": "Easy",
+    "method": [
+      "Cook pasta according to package instructions. Drain and set aside.",
+      "In a skillet, sauté garlic and shrimp until the shrimp are pink and cooked through.",
+      "Deglaze the pan with lemon juice, then add zest and a splash of pasta water to create a sauce.",
+      "Toss the pasta in the sauce, and add fresh parsley and grated Parmesan before serving."
+    ],
+    "ingredients": [
+      "1 lb spaghetti or linguine",
+      "2 tbsp olive oil",
+      "4 cloves garlic, minced",
+      "1 lb shrimp, peeled and deveined",
+      "Juice and zest of 1 lemon",
+      "1/4 cup pasta water",
+      "Salt and pepper to taste",
+      "Parsley for garnish",
+      "Parmesan cheese for serving"
+    ],
+    "blog": "Lemon Garlic Shrimp Pasta is a celebration of simplicity and flavor, marrying the freshness of seafood with the zing of citrus. On a sunny day, this dish shines like a beacon of light, offering a taste of summer in every bite. It's a reminder that good food can transport us to sunnier days, no matter the weather outside."
     }
 ]
+ 

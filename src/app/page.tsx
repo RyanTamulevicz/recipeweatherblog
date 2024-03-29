@@ -26,18 +26,13 @@ export default function Home() {
         </div>
 
         <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {filteredRecipes.map((recipe, index) => (
-          <RecipeCard key={index} recipe={recipe} />
-        ))}
-        {filteredRecipes.map((recipe, index) => (
-          <RecipeCard key={index + filteredRecipes.length} recipe={recipe} />
-        ))}
-        {filteredRecipes.map((recipe, index) => (
-          <RecipeCard key={index} recipe={recipe} />
-        ))}
-        {filteredRecipes.map((recipe, index) => (
-          <RecipeCard key={index + filteredRecipes.length} recipe={recipe} />
-        ))}
+        {
+          [...Array(4)].map((_, i) =>
+            filteredRecipes.map((recipe, index) => (
+              <RecipeCard key={index + i * filteredRecipes.length} recipe={recipe} />
+            ))
+          )
+        }
         </div>
 
       </div>
