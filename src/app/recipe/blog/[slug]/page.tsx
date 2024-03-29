@@ -46,7 +46,6 @@ export default function Page({ params }: { params: { slug: string } }) {
           <RelatedRecipes />
         </div>
       </div>
-      {/* make a section for the blog text */}
       <div className="grid gap-4 lg:col-span-3">
         <h2 className="font-bold text-xl">Blog</h2>
         <p>
