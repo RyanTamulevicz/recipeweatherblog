@@ -1,4 +1,3 @@
-import { warn } from "console"
 import type { Config } from "tailwindcss"
 
 const config = {
