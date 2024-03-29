@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/card"; 
 import Link from "next/link";
 import { Timer } from "lucide-react";
-import { WeatherIcon } from "@/components/weathericon";
+import { WeatherIcon } from "@/components/WeatherIcon";
 import { Recipe } from "@/types/recipe";
 import Image from "next/image";
 

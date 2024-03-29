@@ -1,6 +1,6 @@
 import { Recipe } from "@/types/recipe";
 import { Clock, TrendingUpIcon } from "lucide-react";
-import { WeatherIcon } from "@/components/weathericon";
+import { WeatherIcon } from "@/components/WeatherIcon";
 
 export default function DetailTitleSection(recipe: Recipe) {
     return(

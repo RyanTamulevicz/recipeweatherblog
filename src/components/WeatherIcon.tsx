@@ -12,6 +12,5 @@ export function WeatherIcon({ weather }: WeatherIconProps): JSX.Element {
         'snowy': <Snowflake />,
     };
 
-    // Fallback to 'cloudy' as the default weather icon if the weather prop is not in weatherIcons
     return weatherIcons[weather] || <Cloud />;
 }
