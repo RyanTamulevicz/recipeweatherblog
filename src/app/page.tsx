@@ -2,39 +2,10 @@
 import { useState } from 'react';
 import { Input } from "@/components/ui/input"
 import RecipeCard from "@/components/recipecard/recipe_card"
+import recipes from "@/data/recipes.json"
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState('');
-
-  const recipes = [
-    {
-      title: "Chicken Alfredo",
-      description: "A creamy pasta dish with chicken",
-      imageUrl: "https://thecozycook.com/wp-content/uploads/2022/08/Chicken-Alfredo-Pasta-1-1.jpg",
-      link: "/",
-      time_to_cook: "30 minutes",
-      good_in_weather: "cloudy",
-      difficulty: "Medium"
-    },
-    {
-      title : "Spaghetti and Meatballs",
-      description: "A classic Italian dish",
-      imageUrl: "https://static01.nyt.com/images/2017/04/05/dining/05COOKING-NIGMEATBALLS2/05COOKING-NIGMEATBALLS2-superJumbo.jpg",
-      link: "/",
-      time_to_cook: "30 minutes",
-      good_in_weather: "sunny",
-      difficulty: "Medium"
-    },
-    {
-      title: "Grilled Cheese",
-      description: "A classic American sandwich",
-      imageUrl: "https://cdn.loveandlemons.com/wp-content/uploads/2023/01/grilled-cheese.jpg",
-      link: "/",
-      time_to_cook: "30 minutes",
-      good_in_weather: "snowy",
-      difficulty: "Hard"
-    },
-  ];
 
   const filteredRecipes = recipes.filter(recipe =>
     recipe.title.toLowerCase().includes(searchTerm.toLowerCase())
