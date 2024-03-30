@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "def:api": "cd api/cmd/api && go run main.go",
+    "dev-all": "concurrently \"pnpm run dev\" \"pnpm run def:api\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
