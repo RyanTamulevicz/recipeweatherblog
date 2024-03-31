@@ -21,3 +21,8 @@ func (handler *Handler) CreateUserHandler(c *gin.Context) {
 		return
 	}
 }
+
+func (handler *Handler) AuthCheckHandler(c *gin.Context) {
+	userID, _ := c.Get("userID")
+	c.JSON(http.StatusOK, gin.H{"userID": userID})
+}

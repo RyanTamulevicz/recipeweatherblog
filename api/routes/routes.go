@@ -15,6 +15,7 @@ func Setup(router *gin.Engine, handler *handler.Handler, cfg *config.Config) {
 	authorized := router.Group("/api/recipes")
 	authorized.Use(middleware.AuthMiddleware(cfg))
 	{
+		authorized.GET("/api/user/authcheck", handler.AuthCheckHandler)
 		authorized.GET("/hello", handler.HelloWorldHandler)
 	}
 }

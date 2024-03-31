@@ -38,5 +38,5 @@ func (handler *Handler) LoginHandler(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{"token": tokenString})
+	c.JSON(http.StatusOK, gin.H{"token": tokenString, "expiresAt": expirationTime, "user_id": user.ID, "email": user.Email})
 }
