@@ -10,6 +10,12 @@ import (
 	"github.com/golang-jwt/jwt"
 )
 
+type CustomClaims struct {
+	jwt.StandardClaims
+	UserID uint   `json:"user_id"`
+	Email  string `json:"email"`
+}
+
 func (handler *Handler) LoginHandler(c *gin.Context) {
 	var credentials model.User
 	if err := c.ShouldBindJSON(&credentials); err != nil {
@@ -24,10 +30,14 @@ func (handler *Handler) LoginHandler(c *gin.Context) {
 		return
 	}
 
-	expirationTime := time.Now().Add(1 * time.Minute)
-	claims := &jwt.StandardClaims{
-		Subject:   user.Email,
-		ExpiresAt: expirationTime.Unix(),
+	expirationTime := time.Now().Add(1 * time.Hour)
+	claims := &CustomClaims{
+		StandardClaims: jwt.StandardClaims{
+			ExpiresAt: expirationTime.Unix(),
+			Subject:   user.Email,
+		},
+		UserID: user.ID,
+		Email:  user.Email,
 	}
 
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)

@@ -12,7 +12,7 @@ export default function Sidenav() {
         <CloudDrizzle className="w-6 h-6" />
         <span className="sr-only">Weather</span>
         </Link>
-        <Link className="flex w-full p-2 rounded-lg justify-center hover:bg-gray-200 dark:hover:bg-gray-700" href="#">
+        <Link className="flex w-full p-2 rounded-lg justify-center hover:bg-gray-200 dark:hover:bg-gray-700" href="/admin">
         <SettingsIcon className="w-6 h-6" />
         <span className="sr-only">Settings</span>
         </Link>

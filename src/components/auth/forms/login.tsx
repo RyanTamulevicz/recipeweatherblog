@@ -14,6 +14,7 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import { login } from "@/lib/auth"
  
 interface userSchema {
     Email: string;
@@ -22,10 +23,10 @@ interface userSchema {
 
 let errorString = "Email or Password was incorrect or not found!";
 const formSchema = z.object({
-    Email: z.string().refine(value => value === 'ryan@orchidsoftsolutions.com', {
+    Email: z.string().email({
         message: errorString,
     }),
-    Password: z.string().refine(value => value === 'Iyan!', {
+    Password: z.string().min(4, {
         message: errorString,
     }),
 })
@@ -34,14 +35,19 @@ export function LoginForm() {
     const form = useForm<userSchema>({
         resolver: zodResolver(formSchema),
     })
-
-    const onSubmit = (data: userSchema) => {
-        alert('Successful login');
+    const onSubmit = async (data: any) => {
+      const response = await login(data);
+      if (response && response.error) {
+        form.setError("Password", {
+          type: "manual",
+          message: response.error,
+        });
+      } 
     }
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form onSubmit={form.handleSubmit((data) => onSubmit(data))} className="space-y-8">
         <FormField
           control={form.control}
           name="Email"

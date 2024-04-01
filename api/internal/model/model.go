@@ -57,13 +57,13 @@ func (u *User) ComparePassword(password string) error {
 type Recipe struct {
 	gorm.Model
 	Title           string
-	Slug            string
+	Slug            string `gorm:"unique"`
 	Description     string
 	ImageUrl        string
 	Time_to_cook    int
 	Good_in_weather string
 	Difficulty      string
-	Methods         string
-	Ingredients     string
+	Methods         string `gorm:"type:json"`
+	Ingredients     string `gorm:"type:json"`
 	Blog            string
 }

@@ -2,9 +2,7 @@ package handler
 
 import (
 	"api/internal/config"
-	"net/http"
 
-	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
 )
 
@@ -18,7 +16,4 @@ func NewHandler(cfg *config.Config, db *gorm.DB) *Handler {
 		Config: cfg,
 		DB:     db,
 	}
-}
-func (handler *Handler) HelloWorldHandler(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{"message": "Hello, world from Gin!"})
 }
