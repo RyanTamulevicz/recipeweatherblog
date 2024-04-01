@@ -3,7 +3,6 @@ import { cookies } from "next/headers";
 
 export async function createRecipe(formData: any) {
     formData.Time_to_cook = parseInt(formData.Time_to_cook)
-    // make formData.Method and formData.Ingredients json objects that get separated by the new lines and store it as a json string
 
     formData.Methods = JSON.stringify(formData.Methods.split("\n"))
     formData.Ingredients = JSON.stringify(formData.Ingredients.split("\n"))
